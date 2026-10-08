@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -111,6 +112,31 @@
             </div>
         </section>
 
+                <section class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2 class="section-heading__title">Контакты</h2>
+                    <p class="section-heading__text">Свяжитесь с нами! Мы рады каждому новому клиенту.</p>
+                </div>
+
+                <div class="contacts">
+                    <article class="contacts__card">
+                        <h2>Ветклиника</h2>
+                        <p>Адрес: г. Москва, ул. Центральная, дом 1, офис 15</p>
+                        <p>Телефон: <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+                        <p>Почта: <a href="mailto:vetclinic@mail.ru">vetclinic@mail.ru</a></p>
+                        <p>Ежедневно: 09:00–21:00</p>
+                    </article>
+
+                    <div class="contacts__map">
+                        <iframe
+                            src="https://www.google.com/maps?q=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,%20%D1%83%D0%BB.%20%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F,%2015&output=embed"
+                            title="Карта расположения ветеринарной клиники" loading="lazy" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="section">
             <div class="container">
                 <div class="feedback">
@@ -210,6 +236,9 @@
                 <label class="form__label" for="registerEmail">Email <span class="form__required">*</span></label>
                 <input class="form__input" id="registerEmail" type="email" name="email" required autocomplete="email"
                     placeholder="name@example.ru">
+                <label class="form__label" for="registerEmail">Телефон <span class="form__required">*</span></label>
+                <input class="form__input" id="registerEmail" type="email" name="email" required autocomplete="email"
+                    placeholder="+7(9__)-___-__-__">
 
                 <label class="form__label" for="registerPassword">Пароль <span class="form__required">*</span></label>
                 <input class="form__input" id="registerPassword" type="password" name="password" required minlength="8"
@@ -220,9 +249,14 @@
                 <input class="form__input" id="registerPasswordConfirm" type="password" name="password_confirm" required
                     autocomplete="new-password" placeholder="Повторите пароль">
 
-                <label class="form__check">
+<label class="form__check">
                     <input type="checkbox" name="terms" required>
-                    <span>Я согласен(на) с условиями использования и обработкой данных <span
+                    <span>Я принимаю условия использования и политику конфиденциальности <span
+                            class="form__required">*</span></span>
+                </label>
+                                <label class="form__check">
+                    <input type="checkbox" name="terms" required>
+                    <span>Я согласен(на) на получение информации рекламного характера <span
                             class="form__required">*</span></span>
                 </label>
 
