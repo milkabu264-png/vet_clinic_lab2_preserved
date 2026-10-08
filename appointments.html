@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись — Ветклиника</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="js/main.js" defer></script>
+    <script src="js/forms.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <a class="logo header__logo" href="index.html" aria-label="Ветклиника — на главную">
+            <img class="logo__paw" src="images/paw.png" alt="">
+            <span class="logo__text">Ветклиника</span>
+        </a>
+
+        <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+        </button>
+
+        <nav class="nav header__nav" id="main-nav" aria-label="Основная навигация">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+                <li class="nav__item"><a class="nav__link" href="service.html">Услуги</a></li>
+                <li class="nav__item"><a class="nav__link" href="doctors.html">Врачи</a></li>
+                <li class="nav__item"><a class="nav__link nav__link--active" href="appointments.html">Запись</a></li>
+            </ul>
+
+            <div class="auth-buttons nav__auth">
+                <button class="auth-buttons__button" type="button" data-modal-open="loginModal">Войти</button>
+                <button class="auth-buttons__button auth-buttons__button--dark" type="button"
+                    data-modal-open="registerModal">Регистрация</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section appointment">
+            <div class="container">
+                <div class="section-heading">
+                    <h1 class="section-heading__title">Запись на приём</h1>
+                    <p class="section-heading__text">Оставьте свои данные, и мы свяжемся с вами для подтверждения
+                        записи.</p>
+                </div>
+
+                <div class="appointment__box">
+                    <form class="appointment-form" action="#" method="post" data-demo-form>
+                        <label class="form__label" for="appointmentName">Ваше имя <span
+                                class="form__required">*</span></label>
+                        <input class="form__input" id="appointmentName" type="text" name="name" required
+                            placeholder="Имя">
+
+                        <label class="form__label" for="appointmentPhone">Телефон <span
+                                class="form__required">*</span></label>
+                        <input class="form__input" id="appointmentPhone" type="tel" name="phone" required
+                            placeholder="+7 999 999 99 99">
+
+                        <label class="form__label" for="petName">Имя питомца <span
+                                class="form__required">*</span></label>
+                        <input class="form__input" id="petName" type="text" name="pet_name" required
+                            placeholder="Имя питомца">
+
+                        <div class="appointment-form__row">
+                            <div>
+                                <label class="form__label" for="appointmentService">Услуга <span
+                                        class="form__required">*</span></label>
+                                <select class="form__select" id="appointmentService" name="service" required>
+                                    <option value="">Выберите услугу</option>
+                                    <option>Первичный приём</option>
+                                    <option>Вакцинация</option>
+                                    <option>УЗИ и диагностика</option>
+                                    <option>Стоматология</option>
+                                    <option>Хирургия</option>
+                                    <option>Дерматология</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="form__label" for="appointmentDate">Дата <span
+                                        class="form__required">*</span></label>
+                                <input class="form__input" id="appointmentDate" type="date" name="date" required>
+                            </div>
+                        </div>
+
+                        <label class="form__label" for="appointmentComment">Комментарий</label>
+                        <textarea class="form__textarea" id="appointmentComment" name="comment" rows="5"
+                            placeholder="Дополнительная информация"></textarea>
+
+                        <label class="form__check">
+                            <input type="checkbox" name="privacy" required>
+                            <span>Согласен(на) на обработку персональных данных <span
+                                    class="form__required">*</span></span>
+                        </label>
+
+                        <button class="button" type="submit">Записаться на приём</button>
+                        <p class="form-status" aria-live="polite"></p>
+                    </form>
+
+                    <div class="appointment__image">
+                        <img src="images/last.png" alt="Домашние животные">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="feedback">
+                    <div class="feedback__intro">
+                        <h2>Обратная связь</h2>
+                        <p>Если у вас есть вопрос о работе клиники, отправьте сообщение через форму.</p>
+                    </div>
+
+                    <form class="form feedback__form" action="#" method="post" data-demo-form>
+                        <label class="form__label" for="feedbackName">Имя <span class="form__required">*</span></label>
+                        <input class="form__input" id="feedbackName" type="text" name="name" required>
+
+                        <label class="form__label" for="feedbackEmail">Email <span
+                                class="form__required">*</span></label>
+                        <input class="form__input" id="feedbackEmail" type="email" name="email" required>
+
+                        <label class="form__label" for="feedbackSubject">Тема <span
+                                class="form__required">*</span></label>
+                        <select class="form__select" id="feedbackSubject" name="subject" required>
+                            <option value="">Выберите тему</option>
+                            <option value="appointment">Запись на приём</option>
+                            <option value="services">Вопрос об услугах</option>
+                            <option value="doctors">Вопрос о врачах</option>
+                            <option value="other">Другое</option>
+                        </select>
+
+                        <label class="form__label" for="feedbackMessage">Сообщение <span
+                                class="form__required">*</span></label>
+                        <textarea class="form__textarea" id="feedbackMessage" name="message" required
+                            rows="5"></textarea>
+
+                        <label class="form__check">
+                            <input type="checkbox" name="privacy" required>
+                            <span>Согласен(на) на обработку персональных данных <span
+                                    class="form__required">*</span></span>
+                        </label>
+
+                        <button class="button" type="submit">Отправить сообщение</button>
+                        <p class="form-status" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__logo">
+                <img src="images/paw.png" alt="">
+                <span>Ветклиника</span>
+            </div>
+
+            <div class="footer__contacts">
+                <p>Адрес: г. Москва, ул. Центральная, дом 1, офис 15</p>
+                <p>Телефон: <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+                <p>Почта: <a href="mailto:vetclinic@mail.ru">vetclinic@mail.ru</a></p>
+            </div>
+        </div>
+    </footer>
+    <div class="modal" id="loginModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+        <div class="modal__window">
+            <button class="modal__close" type="button" data-modal-close aria-label="Закрыть окно">×</button>
+            <h2 class="modal__title" id="loginTitle">Вход</h2>
+
+            <form class="form" action="#" method="post" data-demo-form>
+                <label class="form__label" for="loginEmail">Почта <span class="form__required">*</span></label>
+                <input class="form__input" id="loginEmail" type="email" name="email" required autocomplete="username"
+                    placeholder="Введите почту">
+
+                <label class="form__label" for="loginPassword">Пароль <span class="form__required">*</span></label>
+                <input class="form__input" id="loginPassword" type="password" name="password" required
+                    autocomplete="current-password" placeholder="Введите пароль">
+
+                <label class="form__check">
+                    <input type="checkbox" name="remember">
+                    <span>Запомнить меня</span>
+                </label>
+
+                <button class="button button--green" type="submit">Войти</button>
+                <p class="form-status" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="registerModal" aria-hidden="true" role="dialog" aria-modal="true"
+        aria-labelledby="registerTitle">
+        <div class="modal__window">
+            <button class="modal__close" type="button" data-modal-close aria-label="Закрыть окно">×</button>
+            <h2 class="modal__title" id="registerTitle">Регистрация</h2>
+
+            <form class="form" id="registerForm" action="#" method="post" data-demo-form>
+                <label class="form__label" for="registerName">Имя пользователя <span
+                        class="form__required">*</span></label>
+                <input class="form__input" id="registerName" type="text" name="username" required minlength="3"
+                    autocomplete="name" placeholder="Минимум 3 символа">
+
+                <label class="form__label" for="registerEmail">Email <span class="form__required">*</span></label>
+                <input class="form__input" id="registerEmail" type="email" name="email" required autocomplete="email"
+                    placeholder="name@example.ru">
+
+                <label class="form__label" for="registerPassword">Пароль <span class="form__required">*</span></label>
+                <input class="form__input" id="registerPassword" type="password" name="password" required minlength="8"
+                    autocomplete="new-password" placeholder="Минимум 8 символов">
+
+                <label class="form__label" for="registerPasswordConfirm">Подтверждение пароля <span
+                        class="form__required">*</span></label>
+                <input class="form__input" id="registerPasswordConfirm" type="password" name="password_confirm" required
+                    autocomplete="new-password" placeholder="Повторите пароль">
+
+                <label class="form__check">
+                    <input type="checkbox" name="terms" required>
+                    <span>Я согласен(на) с условиями использования и обработкой данных <span
+                            class="form__required">*</span></span>
+                </label>
+
+                <button class="button button--green" type="submit">Зарегистрироваться</button>
+                <p class="form-status" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

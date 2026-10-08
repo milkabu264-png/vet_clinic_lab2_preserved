@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Услуги — Ветклиника</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="js/main.js" defer></script>
+<script src="js/forms.js" defer></script>
+</head>
+<body>
+<header class="header">
+<a class="logo header__logo" href="index.html" aria-label="Ветклиника — на главную">
+<img class="logo__paw" src="images/paw.png" alt="">
+<span class="logo__text">Ветклиника</span>
+</a>
+
+<button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+<span class="burger__line"></span>
+<span class="burger__line"></span>
+<span class="burger__line"></span>
+</button>
+
+<nav class="nav header__nav" id="main-nav" aria-label="Основная навигация">
+<ul class="nav__list">
+<li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+<li class="nav__item"><a class="nav__link nav__link--active" href="service.html">Услуги</a></li>
+<li class="nav__item"><a class="nav__link" href="doctors.html">Врачи</a></li>
+<li class="nav__item"><a class="nav__link" href="appointments.html">Запись</a></li>
+</ul>
+
+<div class="auth-buttons nav__auth">
+<button class="auth-buttons__button" type="button" data-modal-open="loginModal">Войти</button>
+<button class="auth-buttons__button auth-buttons__button--dark" type="button" data-modal-open="registerModal">Регистрация</button>
+</div>
+</nav>
+</header>
+
+<main>
+<section class="section services">
+<div class="container">
+<div class="section-heading">
+<h1 class="section-heading__title">Услуги</h1>
+<p class="section-heading__text">Профессиональная ветеринарная помощь на каждом этапе жизни вашего питомца. Нажмите «Подробнее», чтобы увидеть прайс для кошек, собак и кроликов.</p>
+</div>
+
+<section class="services__category">
+<h2 class="services__category-title">Приём и профилактика</h2>
+<div class="services__grid">
+<div class="service-item">
+<article class="service-card service-card--gray">
+<div class="service-card__content">
+<h3 class="service-card__title"><span>Первичный приём</span></h3>
+<p class="service-card__text">Осмотр питомца, консультация врача и рекомендации по лечению.</p>
+<button class="service-card__button" type="button" aria-expanded="false" aria-controls="price-1">Подробнее ↓</button>
+</div>
+<img class="service-card__image" src="images/cat_diagnosed.jpg" alt="Первичный приём питомца">
+</article>
+
+<div class="price-list" id="price-1" aria-hidden="true">
+<h4 class="price-list__title">Прайс-лист</h4>
+<table class="price-table">
+<thead>
+<tr><th scope="col">Животное</th><th scope="col">Цена</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">Кошки</th><td>1500 ₽</td></tr>
+<tr><th scope="row">Собаки</th><td>1800 ₽</td></tr>
+<tr><th scope="row">Кролики</th><td>1300 ₽</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="service-item">
+<article class="service-card service-card--green">
+<div class="service-card__content">
+<h3 class="service-card__title"><span>Вакцинация</span></h3>
+<p class="service-card__text">Плановая вакцинация и профилактика опасных заболеваний.</p>
+<button class="service-card__button" type="button" aria-expanded="false" aria-controls="price-2">Подробнее ↓</button>
+</div>
+<img class="service-card__image" src="images/vactina.jpg" alt="Вакцинация питомца">
+</article>
+
+<div class="price-list" id="price-2" aria-hidden="true">
+<h4 class="price-list__title">Прайс-лист</h4>
+<table class="price-table">
+<thead>
+<tr><th scope="col">Животное</th><th scope="col">Цена</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">Кошки</th><td>1200 ₽</td></tr>
+<tr><th scope="row">Собаки</th><td>1500 ₽</td></tr>
+<tr><th scope="row">Кролики</th><td>1000 ₽</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="service-item">
+<article class="service-card service-card--black">
+<div class="service-card__content">
+<h3 class="service-card__title"><span>Дерматология</span></h3>
+<p class="service-card__text">Диагностика и лечение заболеваний кожи, шерсти и аллергий.</p>
+<button class="service-card__button" type="button" aria-expanded="false" aria-controls="price-3">Подробнее ↓</button>
+</div>
+<img class="service-card__image" src="images/derma.jpg" alt="Осмотр кожи питомца">
+</article>
+
+<div class="price-list" id="price-3" aria-hidden="true">
+<h4 class="price-list__title">Прайс-лист</h4>
+<table class="price-table">
+<thead>
+<tr><th scope="col">Животное</th><th scope="col">Цена</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">Кошки</th><td>1700 ₽</td></tr>
+<tr><th scope="row">Собаки</th><td>1900 ₽</td></tr>
+<tr><th scope="row">Кролики</th><td>1500 ₽</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section class="services__category">
+<h2 class="services__category-title">Диагностика</h2>
+<div class="services__grid">
+<div class="service-item">
+<article class="service-card service-card--gray">
+<div class="service-card__content">
+<h3 class="service-card__title"><span>УЗИ и диагностика</span></h3>
+<p class="service-card__text">Современная диагностика для точного определения состояния питомца.</p>
+<button class="service-card__button" type="button" aria-expanded="false" aria-controls="price-4">Подробнее ↓</button>
+</div>
+<img class="service-card__image" src="images/usi.jpg" alt="УЗИ питомца">
+</article>
+
+<div class="price-list" id="price-4" aria-hidden="true">
+<h4 class="price-list__title">Прайс-лист</h4>
+<table class="price-table">
+<thead>
+<tr><th scope="col">Животное</th><th scope="col">Цена</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">Кошки</th><td>2000 ₽</td></tr>
+<tr><th scope="row">Собаки</th><td>2300 ₽</td></tr>
+<tr><th scope="row">Кролики</th><td>1800 ₽</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="service-item">
+<article class="service-card service-card--green">
+<div class="service-card__content">
+<h3 class="service-card__title"><span>Лабораторные анализы</span></h3>
+<p class="service-card__text">Исследование крови и других материалов для уточнения диагноза.</p>
+<button class="service-card__button" type="button" aria-expanded="false" aria-controls="price-5">Подробнее ↓</button>
+</div>
+<img class="service-card__image" src="images/cat_diagnosed.jpg" alt="Диагностика питомца">
+</article>
+
+<div class="price-list" id="price-5" aria-hidden="true">
+<h4 class="price-list__title">Прайс-лист</h4>
+<table class="price-table">
+<thead>
+<tr><th scope="col">Животное</th><th scope="col">Цена</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">Кошки</th><td>1100 ₽</td></tr>
+<tr><th scope="row">Собаки</th><td>1300 ₽</td></tr>
+<tr><th scope="row">Кролики</th><td>1000 ₽</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="service-item">
+<article class="service-card service-card--black">
+<div class="service-card__content">
+<h3 class="service-card__title"><span>Рентген</span></h3>
+<p class="service-card__text">Исследование костей, суставов и внутренних органов по назначению врача.</p>
+<button class="service-card__button" type="button" aria-expanded="false" aria-controls="price-6">Подробнее ↓</button>
+</div>
+<img class="service-card__image" src="images/usi.jpg" alt="Диагностика животного">
+</article>
+
+<div class="price-list" id="price-6" aria-hidden="true">
+<h4 class="price-list__title">Прайс-лист</h4>
+<table class="price-table">
+<thead>
+<tr><th scope="col">Животное</th><th scope="col">Цена</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">Кошки</th><td>1800 ₽</td></tr>
+<tr><th scope="row">Собаки</th><td>2100 ₽</td></tr>
+<tr><th scope="row">Кролики</th><td>1600 ₽</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section class="services__category">
+<h2 class="services__category-title">Лечение</h2>
+<div class="services__grid">
+<div class="service-item">
+<article class="service-card service-card--gray">
+<div class="service-card__content">
+<h3 class="service-card__title"><span>Стоматология</span></h3>
+<p class="service-card__text">Лечение зубов и профилактика заболеваний полости рта.</p>
+<button class="service-card__button" type="button" aria-expanded="false" aria-controls="price-7">Подробнее ↓</button>
+</div>
+<img class="service-card__image" src="images/dentist.jpg" alt="Ветеринарная стоматология">
+</article>
+
+<div class="price-list" id="price-7" aria-hidden="true">
+<h4 class="price-list__title">Прайс-лист</h4>
+<table class="price-table">
+<thead>
+<tr><th scope="col">Животное</th><th scope="col">Цена</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">Кошки</th><td>2500 ₽</td></tr>
+<tr><th scope="row">Собаки</th><td>3000 ₽</td></tr>
+<tr><th scope="row">Кролики</th><td>2200 ₽</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="service-item">
+<article class="service-card service-card--green">
+<div class="service-card__content">
+<h3 class="service-card__title"><span>Хирургия</span></h3>
+<p class="service-card__text">Плановые и экстренные операции с последующим наблюдением.</p>
+<button class="service-card__button" type="button" aria-expanded="false" aria-controls="price-8">Подробнее ↓</button>
+</div>
+<img class="service-card__image" src="images/surgery.jpg" alt="Ветеринарная хирургия">
+</article>
+
+<div class="price-list" id="price-8" aria-hidden="true">
+<h4 class="price-list__title">Прайс-лист</h4>
+<table class="price-table">
+<thead>
+<tr><th scope="col">Животное</th><th scope="col">Цена</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">Кошки</th><td>5000 ₽</td></tr>
+<tr><th scope="row">Собаки</th><td>6500 ₽</td></tr>
+<tr><th scope="row">Кролики</th><td>4500 ₽</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="service-item">
+<article class="service-card service-card--black">
+<div class="service-card__content">
+<h3 class="service-card__title"><span>Экстренная помощь</span></h3>
+<p class="service-card__text">Осмотр и первая помощь при острых состояниях и травмах.</p>
+<button class="service-card__button" type="button" aria-expanded="false" aria-controls="price-9">Подробнее ↓</button>
+</div>
+<img class="service-card__image" src="images/surgery.jpg" alt="Экстренная ветеринарная помощь">
+</article>
+
+<div class="price-list" id="price-9" aria-hidden="true">
+<h4 class="price-list__title">Прайс-лист</h4>
+<table class="price-table">
+<thead>
+<tr><th scope="col">Животное</th><th scope="col">Цена</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">Кошки</th><td>2200 ₽</td></tr>
+<tr><th scope="row">Собаки</th><td>2600 ₽</td></tr>
+<tr><th scope="row">Кролики</th><td>2000 ₽</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="footer__inner">
+<div class="footer__logo">
+<img src="images/paw.png" alt="">
+<span>Ветклиника</span>
+</div>
+
+<div class="footer__contacts">
+<p>Адрес: г. Москва, ул. Центральная, дом 1, офис 15</p>
+<p>Телефон: <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+<p>Почта: <a href="mailto:vetclinic@mail.ru">vetclinic@mail.ru</a></p>
+</div>
+</div>
+</footer>
+<div class="modal" id="loginModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+<div class="modal__window">
+<button class="modal__close" type="button" data-modal-close aria-label="Закрыть окно">×</button>
+<h2 class="modal__title" id="loginTitle">Вход</h2>
+
+<form class="form" action="#" method="post" data-demo-form>
+<label class="form__label" for="loginEmail">Почта <span class="form__required">*</span></label>
+<input class="form__input" id="loginEmail" type="email" name="email" required autocomplete="username" placeholder="Введите почту">
+
+<label class="form__label" for="loginPassword">Пароль <span class="form__required">*</span></label>
+<input class="form__input" id="loginPassword" type="password" name="password" required autocomplete="current-password" placeholder="Введите пароль">
+
+<label class="form__check">
+<input type="checkbox" name="remember">
+<span>Запомнить меня</span>
+</label>
+
+<button class="button button--green" type="submit">Войти</button>
+<p class="form-status" aria-live="polite"></p>
+</form>
+</div>
+</div>
+
+<div class="modal" id="registerModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="registerTitle">
+<div class="modal__window">
+<button class="modal__close" type="button" data-modal-close aria-label="Закрыть окно">×</button>
+<h2 class="modal__title" id="registerTitle">Регистрация</h2>
+
+<form class="form" id="registerForm" action="#" method="post" data-demo-form>
+<label class="form__label" for="registerName">Имя пользователя <span class="form__required">*</span></label>
+<input class="form__input" id="registerName" type="text" name="username" required minlength="3" autocomplete="name" placeholder="Минимум 3 символа">
+
+<label class="form__label" for="registerEmail">Email <span class="form__required">*</span></label>
+<input class="form__input" id="registerEmail" type="email" name="email" required autocomplete="email" placeholder="name@example.ru">
+
+<label class="form__label" for="registerPassword">Пароль <span class="form__required">*</span></label>
+<input class="form__input" id="registerPassword" type="password" name="password" required minlength="8" autocomplete="new-password" placeholder="Минимум 8 символов">
+
+<label class="form__label" for="registerPasswordConfirm">Подтверждение пароля <span class="form__required">*</span></label>
+<input class="form__input" id="registerPasswordConfirm" type="password" name="password_confirm" required autocomplete="new-password" placeholder="Повторите пароль">
+
+<label class="form__check">
+<input type="checkbox" name="terms" required>
+<span>Я согласен(на) с условиями использования и обработкой данных <span class="form__required">*</span></span>
+</label>
+
+<button class="button button--green" type="submit">Зарегистрироваться</button>
+<p class="form-status" aria-live="polite"></p>
+</form>
+</div>
+</div>
+<script src="js/services.js" defer></script>
+</body>
+</html>
